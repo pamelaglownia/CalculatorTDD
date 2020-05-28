@@ -11,7 +11,7 @@ class Calculator {
 
 
     double add(double firstNumber, double secondNumber) {
-        return 0;
+        return firstNumber + secondNumber;
     }
 }
 

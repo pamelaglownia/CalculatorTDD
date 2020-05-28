@@ -23,6 +23,6 @@ public class CalculatorTest {
         // When
         double result = this.calculator.add(firstNumber, secondNumber);
         // Then
-        Assert.assertEquals("3.0", result);
+        Assert.assertEquals(3.0, result, 0.01);
     }
 }
