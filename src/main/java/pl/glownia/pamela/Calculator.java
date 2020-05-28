@@ -9,6 +9,9 @@ class Calculator {
         this.takeData = takeData;
     }
 
+    Symbol getOperator() {
+        return null;
+    }
 
     double add(double firstNumber, double secondNumber) {
         return firstNumber + secondNumber;

@@ -16,6 +16,16 @@ public class CalculatorTest {
     }
 
     @Test
+    public void ShouldBeCorrectOperator() {
+        // Given
+        char operator = '+';
+        // When
+        Symbol symbol = this.calculator.getOperator();
+        // Then
+        Assert.assertEquals('+', symbol);
+    }
+
+    @Test
     public void ShouldAddTwoNumbers() {
         // Given
         double firstNumber = 1.0;
