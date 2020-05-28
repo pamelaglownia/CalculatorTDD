@@ -15,15 +15,15 @@ class Calculator {
     }
 
     double subtract(double firstNumber, double secondNumber) {
-        return 0;
+        return firstNumber - secondNumber;
     }
 
     double multiply(double firstNumber, double secondNumber) {
-        return 0;
+        return firstNumber * secondNumber;
     }
 
     double divide(double firstNumber, double secondNumber) {
-        return 0;
+        return firstNumber / secondNumber;
     }
 }
 
