@@ -6,9 +6,12 @@ import org.junit.Test;
 
 import java.util.Scanner;
 
+import static pl.glownia.pamela.Symbol.*;
+
 public class CalculatorTest {
     private Calculator calculator;
     private Scanner takeData;
+    private Symbol symbol;
 
     @Before
     public void setUp() throws Exception {
@@ -16,56 +19,57 @@ public class CalculatorTest {
     }
 
     @Test
-    public void ShouldBeCorrectOperator() {
-        // Given
-        char operator = '+';
-        // When
-        Symbol symbol = this.calculator.getOperator();
-        // Then
-        Assert.assertEquals('+', symbol);
-    }
-
-    @Test
     public void ShouldAddTwoNumbers() {
         // Given
-        double firstNumber = 1.0;
-        double secondNumber = 2.0;
+        double firstNumber = 1;
+        double secondNumber = 2;
         // When
-        double result = this.calculator.add(firstNumber, secondNumber);
+        double result = calculator.getResult(PLUS, 1, 2);
         // Then
-        Assert.assertEquals(3.0, result, 0.01);
+        Assert.assertEquals(3.0, result, 0.1);
     }
 
     @Test
     public void ShouldSubtractTwoNumbers() {
         // Given
-        double firstNumber = 10.0;
-        double secondNumber = 3.0;
+        double firstNumber = 10;
+        double secondNumber = 1;
         // When
-        double result = this.calculator.subtract(firstNumber, secondNumber);
+        double result = calculator.getResult(MINUS, 10, 1);
         // Then
-        Assert.assertEquals(7.0, result, 0.01);
+        Assert.assertEquals(9.0, result, 0.1);
     }
 
     @Test
     public void ShouldMultiplyTwoNumbers() {
         // Given
-        double firstNumber = 2.0;
-        double secondNumber = 3.0;
+        double firstNumber = 2;
+        double secondNumber = 2;
         // When
-        double result = this.calculator.multiply(firstNumber, secondNumber);
+        double result = calculator.getResult(TIMES, 2, 2);
         // Then
-        Assert.assertEquals(6.0, result, 0.01);
+        Assert.assertEquals(4.0, result, 0.1);
     }
 
     @Test
-    public void ShouldDivideFirstNumberBySecondNumber() {
+    public void ShouldDivideTwoNUmbers() {
         // Given
-        double firstNumber = 18.0;
-        double secondNumber = 2.0;
+        double firstNumber = 6;
+        double secondNumber = 2;
         // When
-        double result = this.calculator.divide(firstNumber, secondNumber);
+        double result = calculator.getResult(DIVIDE, 6, 2);
         // Then
-        Assert.assertEquals(9.0, result, 0.01);
+        Assert.assertEquals(3.0, result, 0.1);
+    }
+
+    @Test
+    public void ShouldNotAllowToDivideByZero() {
+        // Given
+        double firstNumber = 6;
+        double secondNumber = 0;
+        // When
+        double result = calculator.getResult(DIVIDE, 6, 0);
+        // Then
+        // "You can't divide by 0"
     }
 }
