@@ -8,5 +8,6 @@ class CalculatorTDD {
 
         Scanner takeData = new Scanner(System.in);
         Calculator calculator = new Calculator(takeData);
+        calculator.calculate();
     }
 }
