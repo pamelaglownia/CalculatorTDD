@@ -1,13 +1,13 @@
 
-#CalculatorTDD#
+# CalculatorTDD #
 
 
-###Description###
+### Description ###
 
 Calculator in TDD based on my existing project
 
 
-###How to run your project?###
+### How to run your project? ###
 
 1. Clone this repository to your directory.
 2. Go to project directory.
@@ -15,7 +15,7 @@ Calculator in TDD based on my existing project
 4. Run the project.
 
 
-###What do you need to run the project?###
+### What do you need to run the project? ###
 
 1. Java JDK 1.8 or higher.
 2. Maven version 3.5.3 or higher. 
